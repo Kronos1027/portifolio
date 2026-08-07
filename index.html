@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Darlan (NATSKY) — Desenvolvedor, Engenheiro de IA & Criador de Sites</title>
+  <meta name="title" content="Darlan (NATSKY) — Desenvolvedor, Engenheiro de IA & Criador de Sites" />
+  <meta name="description" content="Portfólio de Darlan, conhecido também como NATSKY (@0NATSKY0): desenvolvedor independente, engenheiro de IA aplicada, criador de sites sob demanda com IA e streamer. Projetos como BHUH/Black Hole, AtlasKronos, Nini e LUMI." />
+  <meta name="author" content="Darlan (NATSKY)" />
+  <meta name="keywords" content="Darlan, NATSKY, 0NATSKY0, oxynisx, portfólio, desenvolvedor, IA, engenheiro de IA, agentes locais, compressão neural, GLM, criador de sites, streamer, VTuber, Oto-ai" />
+  <meta name="theme-color" content="#0a0b0f" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://kronos1027.github.io/portifolio/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kronos1027.github.io/portifolio/" />
+  <meta property="og:title" content="Darlan (NATSKY) — Desenvolvedor, Engenheiro de IA & Criador de Sites" />
+  <meta property="og:description" content="Pesquisador e desenvolvedor independente brasileiro. Agentes de IA locais, compressão neural, assistentes desktop/mobile e criação de sites sob demanda com IA." />
+  <meta property="og:image" content="https://kronos1027.github.io/portifolio/assets/img/og-image.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Darlan (NATSKY)" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Darlan (NATSKY) — Desenvolvedor, Engenheiro de IA & Criador de Sites" />
+  <meta name="twitter:description" content="Pesquisador e desenvolvedor independente brasileiro. Agentes de IA locais, compressão neural, assistentes desktop/mobile e criação de sites sob demanda com IA." />
+  <meta name="twitter:image" content="https://kronos1027.github.io/portifolio/assets/img/og-image.png" />
+
+  <!-- Favicon (SVG inline para não depender de arquivo externo) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0b0f'/%3E%3Ctext x='50' y='70' font-family='JetBrains Mono, monospace' font-size='60' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3ED%3C/text%3E%3Ccircle cx='72' cy='30' r='6' fill='%23fbbf24'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0b0f'/%3E%3Ctext x='50' y='70' font-family='JetBrains Mono, monospace' font-size='60' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3ED%3C/text%3E%3C/svg%3E" />
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- AOS.js (scroll reveal) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Structured Data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Darlan",
+    "alternateName": ["NATSKY", "0NATSKY0", "oxynisx", "Oto-ai"],
+    "url": "https://kronos1027.github.io/portifolio/",
+    "image": "https://kronos1027.github.io/portifolio/assets/img/og-image.png",
+    "jobTitle": "Desenvolvedor & Engenheiro de IA",
+    "knowsAbout": ["Inteligência Artificial", "Agentes de IA locais", "Compressão Neural de Imagens", "LLM", "Desenvolvimento Android", "Streaming"],
+    "nationality": "Brasileiro",
+    "sameAs": [
+      "https://github.com/Kronos1027",
+      "https://www.twitch.tv/oxynisx"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__logo">
+      <span class="preloader__bracket">&lt;</span>
+      <span class="preloader__text" id="preloader-text">Darlan</span>
+      <span class="preloader__bracket">/&gt;</span>
+    </div>
+    <div class="preloader__bar"><span></span></div>
+  </div>
+
+  <!-- Particles background -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand" aria-label="Darlan (NATSKY) - Home">
+        <span class="nav__brand-mark">D</span>
+        <span class="nav__brand-text">Darlan<span class="nav__brand-cursor">_</span></span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Navegação principal">
+        <a href="#sobre" class="nav__link"><span class="nav__link-num">01</span> Sobre</a>
+        <a href="#stack" class="nav__link"><span class="nav__link-num">02</span> Stack</a>
+        <a href="#projetos" class="nav__link"><span class="nav__link-num">03</span> Projetos</a>
+        <a href="#servicos" class="nav__link"><span class="nav__link-num">04</span> Serviços</a>
+        <a href="#precos" class="nav__link"><span class="nav__link-num">05</span> Preços</a>
+        <a href="#streaming" class="nav__link"><span class="nav__link-num">06</span> Streaming</a>
+        <a href="#contato" class="nav__link"><span class="nav__link-num">07</span> Contato</a>
+      </nav>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============== HERO ============== -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <p class="hero__status" data-aos="fade-down">
+          <span class="hero__status-dot"></span>
+          Disponível para projetos · Brasil · <span class="hero__status-time" id="local-time"></span>
+        </p>
+        <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+          <span class="hero__name">Darlan</span>
+          <span class="hero__handle">também conhecido como NATSKY / @0NATSKY0</span>
+        </h1>
+        <p class="hero__typing" data-aos="fade-up" data-aos-delay="200">
+          <span class="hero__prompt">$</span>
+          <span class="hero__role" id="typed-role"></span>
+          <span class="hero__caret">▋</span>
+        </p>
+        <p class="hero__lead" data-aos="fade-up" data-aos-delay="300">
+          Pesquisador e desenvolvedor independente construindo agentes de IA locais,
+          compressão neural de imagens e assistentes desktop/mobile. Também crio
+          <strong>sites sob demanda usando IA</strong> de forma autônoma — do briefing ao deploy.
+        </p>
+        <div class="hero__cta" data-aos="fade-up" data-aos-delay="400">
+          <a href="#projetos" class="btn btn--primary">
+            <span>Ver Projetos</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#servicos" class="btn btn--ghost">
+            <span>Contratar um Site</span>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero__stats" data-aos="fade-up" data-aos-delay="500">
+          <div class="stat">
+            <span class="stat__num" data-count="6">0</span>
+            <span class="stat__suffix">+</span>
+            <span class="stat__label">Projetos ativos</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="8">0</span>
+            <span class="stat__suffix">+</span>
+            <span class="stat__label">Linguagens</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="60">0</span>
+            <span class="stat__suffix">%</span>
+            <span class="stat__label">Compressão BHUH</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="100">0</span>
+            <span class="stat__suffix">%</span>
+            <span class="stat__label">On-device</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+        <span class="hero__scroll-text">scroll</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ============== SOBRE ============== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__num">// 01</span>
+          <h2 class="section__title">Sobre</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="about">
+          <div class="about__text" data-aos="fade-right">
+            <p>
+              Sou <strong>Darlan</strong>, conhecido também como <strong>NATSKY</strong> — pesquisador e desenvolvedor independente brasileiro começando
+              carreira em tech com foco em <strong>IA aplicada</strong>. Construo projetos reais: agentes
+              de IA locais que rodam sem nuvem, compressão neural de imagens, assistentes desktop com
+              percepção visual e apps Android que conversam com LLMs quantizados.
+            </p>
+            <p>
+              Acredito que IA não precisa ser gigante nem cara — pode rodar na sua máquina, responder em
+              português, e ainda assim ser produtiva. É isso que eu construo: sistemas onde o modelo
+              é ferramenta, não espetáculo.
+            </p>
+            <p>
+              Hoje também ofereço <strong>criação de sites sob demanda usando IA (GLM)</strong> de forma
+              autônoma: pego o briefing do cliente e entrego o site pronto, funcional e bonito, com
+              precisão de produção — porque este portfólio que você está vendo é, ele mesmo, a prova
+              de que o processo funciona.
+            </p>
+            <div class="about__tags">
+              <span class="tag">Pesquisador independente</span>
+              <span class="tag">IA local-first</span>
+              <span class="tag">Open-source</span>
+              <span class="tag">BR</span>
+            </div>
+          </div>
+
+          <aside class="about__card" data-aos="fade-left" data-aos-delay="200">
+            <div class="terminal">
+              <div class="terminal__bar">
+                <span class="terminal__dot terminal__dot--red"></span>
+                <span class="terminal__dot terminal__dot--yellow"></span>
+                <span class="terminal__dot terminal__dot--green"></span>
+                <span class="terminal__title">~/darlan/profile.sh</span>
+              </div>
+              <pre class="terminal__body"><code><span class="t-comment"># perfil</span>
+<span class="t-key">name</span>=<span class="t-str">"Darlan"</span>
+<span class="t-key">alias</span>=<span class="t-str">"NATSKY"</span>
+<span class="t-key">role</span>=<span class="t-str">"Dev + IA Engineer"</span>
+<span class="t-key">location</span>=<span class="t-str">"Brasil"</span>
+<span class="t-key">focus</span>=<span class="t-str">"IA local, agentes, web"</span>
+
+<span class="t-comment"># princípios</span>
+<span class="t-key">principles</span>=(
+  <span class="t-str">"rodar local sempre que possível"</span>
+  <span class="t-str">"modelo é ferramenta, não hype"</span>
+  <span class="t-str">"entregar, não prometer"</span>
+)</code></pre>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== STACK ============== -->
+    <section class="section section--alt" id="stack">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__num">// 02</span>
+          <h2 class="section__title">Stack &amp; Habilidades</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="stack">
+          <article class="stack__group" data-aos="fade-up">
+            <h3 class="stack__group-title">
+              <span class="stack__icon" aria-hidden="true">◆</span>
+              IA &amp; Agentes
+            </h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <div class="skill__head"><span>Ollama</span><span class="skill__pct">90%</span></div>
+                <div class="skill__bar"><span style="--w:90%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Qwen 2.5 / Qwen 3</span><span class="skill__pct">88%</span></div>
+                <div class="skill__bar"><span style="--w:88%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Agentes locais &amp; tool-calling</span><span class="skill__pct">85%</span></div>
+                <div class="skill__bar"><span style="--w:85%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Prompt engineering avançado</span><span class="skill__pct">92%</span></div>
+                <div class="skill__bar"><span style="--w:92%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>GLM 4.5</span><span class="skill__pct">90%</span></div>
+                <div class="skill__bar"><span style="--w:90%"></span></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="stack__group" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="stack__group-title">
+              <span class="stack__icon" aria-hidden="true">▶</span>
+              Desenvolvimento
+            </h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <div class="skill__head"><span>Python</span><span class="skill__pct">90%</span></div>
+                <div class="skill__bar"><span style="--w:90%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Java</span><span class="skill__pct">82%</span></div>
+                <div class="skill__bar"><span style="--w:82%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Kotlin</span><span class="skill__pct">78%</span></div>
+                <div class="skill__bar"><span style="--w:78%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>JavaScript / HTML / CSS</span><span class="skill__pct">88%</span></div>
+                <div class="skill__bar"><span style="--w:88%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Android (GML)</span><span class="skill__pct">75%</span></div>
+                <div class="skill__bar"><span style="--w:75%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>CUDA</span><span class="skill__pct">70%</span></div>
+                <div class="skill__bar"><span style="--w:70%"></span></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="stack__group" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="stack__group-title">
+              <span class="stack__icon" aria-hidden="true">■</span>
+              Infra &amp; SO
+            </h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <div class="skill__head"><span>Linux (CachyOS / Hyprland)</span><span class="skill__pct">88%</span></div>
+                <div class="skill__bar"><span style="--w:88%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Windows</span><span class="skill__pct">90%</span></div>
+                <div class="skill__bar"><span style="--w:90%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Docker</span><span class="skill__pct">80%</span></div>
+                <div class="skill__bar"><span style="--w:80%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>systemd</span><span class="skill__pct">78%</span></div>
+                <div class="skill__bar"><span style="--w:78%"></span></div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="stack__group" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="stack__group-title">
+              <span class="stack__icon" aria-hidden="true">●</span>
+              Outros
+            </h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <div class="skill__head"><span>OBS / Streaming</span><span class="skill__pct">85%</span></div>
+                <div class="skill__bar"><span style="--w:85%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Automação</span><span class="skill__pct">86%</span></div>
+                <div class="skill__bar"><span style="--w:86%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>Visão computacional (OCR / YOLO)</span><span class="skill__pct">72%</span></div>
+                <div class="skill__bar"><span style="--w:72%"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill__head"><span>TTS / STT</span><span class="skill__pct">80%</span></div>
+                <div class="skill__bar"><span style="--w:80%"></span></div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PROJETOS ============== -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__num">// 03</span>
+          <h2 class="section__title">Projetos em destaque</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <p class="section__lead" data-aos="fade-up" data-aos-delay="100">
+          Seleção de trabalhos reais — pesquisa, engenharia e produto. Passe o mouse nos cards.
+        </p>
+
+        <div class="projects">
+          <!-- 1. BHUH / Black Hole -->
+          <article class="project tilt" data-aos="fade-up">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__num">01</span>
+              <h3 class="project__title">BHUH / Black Hole</h3>
+              <span class="project__cat">Pesquisa · INR</span>
+            </div>
+            <p class="project__desc">
+              Compressão neural implícita <strong>bit-perfect</strong> (SIREN + resíduo híbrido) com
+              codificação aritmética. Escala muito bem em imagens suaves, texturas, volumes 3D e
+              assets de jogo. Demo web em Gradio para testar sem instalar nada.
+            </p>
+            <div class="project__badges">
+              <span class="badge">Python</span>
+              <span class="badge">PyTorch</span>
+              <span class="badge">SIREN</span>
+              <span class="badge">INR</span>
+              <span class="badge">Arithmetic Coding</span>
+              <span class="badge">Gradio</span>
+            </div>
+            <div class="project__metric">
+              <span><strong>+3,1</strong> dB PSNR</span>
+              <span><strong>~60%</strong> compressão</span>
+            </div>
+            <a class="project__link" href="https://github.com/Kronos1027/black-hole" target="_blank" rel="noopener">
+              Ver no GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+
+          <!-- 2. AtlasKronos -->
+          <article class="project tilt" data-aos="fade-up" data-aos-delay="100">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__num">02</span>
+              <h3 class="project__title">AtlasKronos</h3>
+              <span class="project__cat">Android · On-device AI</span>
+            </div>
+            <p class="project__desc">
+              Assistente de IA on-device para Android (Java 21 + GML) rodando LLM quantizado
+              localmente — sem nuvem, sem APIs pagas, latência baixa e privacidade total.
+            </p>
+            <div class="project__badges">
+              <span class="badge">Java 21</span>
+              <span class="badge">Android</span>
+              <span class="badge">GML</span>
+              <span class="badge">LLM quantizado</span>
+              <span class="badge">Offline</span>
+            </div>
+            <div class="project__metric">
+              <span><strong>100%</strong> on-device</span>
+              <span><strong>0</strong> APIs pagas</span>
+            </div>
+            <span class="project__status project__status--dev">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Em desenvolvimento
+            </span>
+          </article>
+
+          <!-- 3. Nini -->
+          <article class="project tilt" data-aos="fade-up" data-aos-delay="200">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__num">03</span>
+              <h3 class="project__title">Nini</h3>
+              <span class="project__cat">Desktop · Companion AI</span>
+            </div>
+            <p class="project__desc">
+              Companheira de IA para desktop Windows com avatar animado, voz TTS em pt-BR,
+              integração com chat de live e controle de PC. Mais que assistente — presença.
+            </p>
+            <div class="project__badges">
+              <span class="badge">Windows</span>
+              <span class="badge">TTS pt-BR</span>
+              <span class="badge">Avatar</span>
+              <span class="badge">Live Chat</span>
+              <span class="badge">PC Control</span>
+            </div>
+            <div class="project__metric">
+              <span><strong>pt-BR</strong> nativo</span>
+              <span><strong>Live</strong>-ready</span>
+            </div>
+            <a class="project__link" href="https://github.com/Kronos1027/Nini_agent_assistant_friend" target="_blank" rel="noopener">
+              Ver no GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+
+          <!-- 4. LUMI -->
+          <article class="project tilt" data-aos="fade-up" data-aos-delay="300">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__num">04</span>
+              <h3 class="project__title">LUMI</h3>
+              <span class="project__cat">Desktop · Autonomous Agent</span>
+            </div>
+            <p class="project__desc">
+              Assistente autônomo de desktop com percepção visual (OCR, wake word em português)
+              e arquitetura de verificação de ações — segurança antes de autonomia.
+            </p>
+            <div class="project__badges">
+              <span class="badge">OCR</span>
+              <span class="badge">Wake Word</span>
+              <span class="badge">Autonomia</span>
+              <span class="badge">Verification Layer</span>
+              <span class="badge">pt-BR</span>
+            </div>
+            <div class="project__metric">
+              <span><strong>Vision</strong>-first</span>
+              <span><strong>Safe</strong> actions</span>
+            </div>
+            <span class="project__status project__status--dev">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Em desenvolvimento
+            </span>
+          </article>
+
+          <!-- 5. OxyMusic -->
+          <article class="project tilt" data-aos="fade-up" data-aos-delay="400">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__num">05</span>
+              <h3 class="project__title">OxyMusic</h3>
+              <span class="project__cat">Android · Media</span>
+            </div>
+            <p class="project__desc">
+              Player de música Android com streaming via YouTube — sem depender de API key.
+              Exemplo de como contornar barreiras artificiais com engenharia criativa.
+            </p>
+            <div class="project__badges">
+              <span class="badge">Android</span>
+              <span class="badge">YouTube</span>
+              <span class="badge">No API Key</span>
+              <span class="badge">Player</span>
+            </div>
+            <div class="project__metric">
+              <span><strong>0</strong> API keys</span>
+              <span><strong>∞</strong> faixas</span>
+            </div>
+            <a class="project__link" href="https://github.com/Kronos1027/oxymusicplay" target="_blank" rel="noopener">
+              Ver no GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+
+          <!-- 6. Compressor de RAM (NEUTRINO) -->
+          <article class="project tilt" data-aos="fade-up" data-aos-delay="400">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__num">06</span>
+              <h3 class="project__title">Compressor de RAM</h3>
+              <span class="project__cat">Windows · Utility</span>
+            </div>
+            <p class="project__desc">
+              <strong>NEUTRINO</strong> — software Windows para reduzir consumo de memória durante jogos:
+              libera RAM ocupada por processos em segundo plano sem matar nada crítico. Simples e eficaz.
+            </p>
+            <div class="project__badges">
+              <span class="badge">Windows</span>
+              <span class="badge">Memory</span>
+              <span class="badge">Gaming</span>
+              <span class="badge">Utility</span>
+            </div>
+            <div class="project__metric">
+              <span><strong>−N</strong> MB liberados</span>
+              <span><strong>Safe</strong> cleanup</span>
+            </div>
+            <span class="project__status project__status--dev">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Em desenvolvimento
+            </span>
+          </article>
+
+          <!-- 7. OXYNISX VTuber Studio -->
+          <article class="project tilt" data-aos="fade-up" data-aos-delay="500">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__num">07</span>
+              <h3 class="project__title">OXYNISX VTuber Studio</h3>
+              <span class="project__cat">Streaming · Live2D</span>
+            </div>
+            <p class="project__desc">
+              Sistema de avatar <strong>Live2D</strong> com lip-sync, rastreamento de mouse e overlay de
+              teclado estilo <strong>BongoCat</strong>. É a ferramenta por trás da persona Oto-ai/oxynisx
+              nos streams da <a href="#streaming" style="color:var(--teal);text-decoration:underline">Twitch</a>.
+            </p>
+            <div class="project__badges">
+              <span class="badge">Live2D</span>
+              <span class="badge">Lip-sync</span>
+              <span class="badge">Mouse Tracking</span>
+              <span class="badge">BongoCat Overlay</span>
+              <span class="badge">OBS-ready</span>
+            </div>
+            <div class="project__metric">
+              <span><strong>Live2D</strong> avatar</span>
+              <span><strong>BongoCat</strong> overlay</span>
+            </div>
+            <a class="project__link" href="https://github.com/Kronos1027/oxynisx-vtuber-studio" target="_blank" rel="noopener">
+              Ver no GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SERVIÇOS ============== -->
+    <section class="section section--alt" id="servicos">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__num">// 04</span>
+          <h2 class="section__title">Sites sob demanda com IA</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <p class="section__lead" data-aos="fade-up" data-aos-delay="100">
+          Processo enxuto, transparente e entregue com precisão de produção —
+          porque <em>este site que você está vendo foi feito assim</em>.
+        </p>
+
+        <div class="process">
+          <article class="process__step" data-aos="fade-up">
+            <div class="process__num">01</div>
+            <h3 class="process__title">Briefing</h3>
+            <p class="process__desc">
+              Conhecemos seu objetivo, referências visuais, identidade e público.
+              Definimos escopo, prazos e estrutura antes de qualquer linha de código.
+            </p>
+          </article>
+
+          <article class="process__step" data-aos="fade-up" data-aos-delay="100">
+            <div class="process__num">02</div>
+            <h3 class="process__title">Geração assistida por IA</h3>
+            <p class="process__desc">
+              Uso GLM de forma autônoma para gerar a base do site, depois faço revisão
+              técnica e ajustes manuais — design system, animações, performance e SEO.
+            </p>
+          </article>
+
+          <article class="process__step" data-aos="fade-up" data-aos-delay="200">
+            <div class="process__num">03</div>
+            <h3 class="process__title">Entrega + Deploy</h3>
+            <p class="process__desc">
+              Site pronto e responsivo, deploy incluso em GitHub Pages, Vercel ou domínio
+              próprio. Você recebe o repositório inteiro — sem lock-in.
+            </p>
+          </article>
+
+          <article class="process__step" data-aos="fade-up" data-aos-delay="300">
+            <div class="process__num">04</div>
+            <h3 class="process__title">Suporte pós-entrega</h3>
+            <p class="process__desc">
+              Ajustes finos, atualizações de conteúdo e pequenas melhorias fazem parte.
+              O site é seu — eu só garanto que ele continua no ar e funcionando.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PREÇOS ============== -->
+    <section class="section" id="precos">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__num">// 05</span>
+          <h2 class="section__title">Tabela de preços &amp; prazos</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <p class="section__lead" data-aos="fade-up" data-aos-delay="100">
+          Valores de partida para o mercado brasileiro. O valor exato é fechado no briefing,
+          conforme escopo, complexidade e urgência.
+        </p>
+
+        <div class="pricing">
+          <article class="price-card" data-aos="fade-up">
+            <header class="price-card__head">
+              <h3 class="price-card__name">Landing Page</h3>
+              <p class="price-card__price">a partir de <strong>R$ 350</strong></p>
+              <p class="price-card__range">R$ 350 – R$ 600</p>
+            </header>
+            <div class="price-card__body">
+              <p class="price-card__deadline"><span>Prazo:</span> 2–4 dias</p>
+              <ul class="price-card__list">
+                <li>1 página, seções essenciais</li>
+                <li>Hero, sobre, serviços/produtos, contato</li>
+                <li>Totalmente responsivo</li>
+                <li>Animações básicas</li>
+              </ul>
+              <a href="#contato" class="btn btn--ghost btn--block">Solicitar</a>
+            </div>
+          </article>
+
+          <article class="price-card price-card--featured" data-aos="fade-up" data-aos-delay="100">
+            <span class="price-card__flag">Mais pedido</span>
+            <header class="price-card__head">
+              <h3 class="price-card__name">Site Institucional</h3>
+              <p class="price-card__price">a partir de <strong>R$ 700</strong></p>
+              <p class="price-card__range">R$ 700 – R$ 1.200</p>
+            </header>
+            <div class="price-card__body">
+              <p class="price-card__deadline"><span>Prazo:</span> 5–8 dias</p>
+              <ul class="price-card__list">
+                <li>Até 5 seções/páginas</li>
+                <li>Animações avançadas</li>
+                <li>Formulário de contato funcional</li>
+                <li>SEO básico + Open Graph</li>
+              </ul>
+              <a href="#contato" class="btn btn--primary btn--block">Solicitar</a>
+            </div>
+          </article>
+
+          <article class="price-card" data-aos="fade-up" data-aos-delay="200">
+            <header class="price-card__head">
+              <h3 class="price-card__name">Portfólio Profissional</h3>
+              <p class="price-card__price">a partir de <strong>R$ 600</strong></p>
+              <p class="price-card__range">R$ 600 – R$ 1.000</p>
+            </header>
+            <div class="price-card__body">
+              <p class="price-card__deadline"><span>Prazo:</span> 5–7 dias</p>
+              <ul class="price-card__list">
+                <li>Estrutura como este site</li>
+                <li>Animações complexas, cards com tilt</li>
+                <li>Contadores e efeitos de scroll</li>
+                <li>Integração com redes sociais</li>
+              </ul>
+              <a href="#contato" class="btn btn--ghost btn--block">Solicitar</a>
+            </div>
+          </article>
+
+          <article class="price-card" data-aos="fade-up" data-aos-delay="300">
+            <header class="price-card__head">
+              <h3 class="price-card__name">E-commerce Simples</h3>
+              <p class="price-card__price">a partir de <strong>R$ 1.500</strong></p>
+              <p class="price-card__range">R$ 1.500 – R$ 2.500</p>
+            </header>
+            <div class="price-card__body">
+              <p class="price-card__deadline"><span>Prazo:</span> 10–15 dias</p>
+              <ul class="price-card__list">
+                <li>Catálogo de produtos</li>
+                <li>Carrinho e checkout</li>
+                <li>Pagamento (Stripe / Mercado Pago)</li>
+                <li>Painel básico de pedidos</li>
+              </ul>
+              <a href="#contato" class="btn btn--ghost btn--block">Solicitar</a>
+            </div>
+          </article>
+
+          <article class="price-card price-card--wide" data-aos="fade-up" data-aos-delay="400">
+            <header class="price-card__head price-card__head--row">
+              <h3 class="price-card__name">Manutenção / Revisão mensal</h3>
+              <p class="price-card__price">a partir de <strong>R$ 150</strong><span class="price-card__per">/mês</span></p>
+            </header>
+            <div class="price-card__body">
+              <p class="price-card__deadline"><span>Modalidade:</span> Contínuo · R$ 150 – R$ 250/mês</p>
+              <ul class="price-card__list price-card__list--inline">
+                <li>Ajustes pontuais</li>
+                <li>Atualização de conteúdo</li>
+                <li>Pequenas melhorias e correções</li>
+                <li>Suporte por mensagem</li>
+              </ul>
+              <a href="#contato" class="btn btn--ghost btn--block">Contratar</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="pricing__note" data-aos="fade-up">
+          <span class="pricing__note-mark">⚠</span>
+          Preços públicos são de partida. O valor fechado depende do briefing — quanto mais
+          claro o escopo, mais justo o preço. Este próprio site é prova do nível de entrega.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============== STREAMING ============== -->
+    <section class="section section--alt" id="streaming">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__num">// 06</span>
+          <h2 class="section__title">Streaming &amp; Conteúdo</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="stream">
+          <div class="stream__left" data-aos="fade-right">
+            <h3 class="stream__title">Persona VTuber: <span class="stream__persona">Oto-ai</span></h3>
+            <p class="stream__desc">
+              No stream vira <strong>Oto-ai</strong> (também assinado como <em>oxynixs</em>) —
+              persona VTuber com olhos heterocromáticos âmbar e teal, mesma paleta deste site.
+              Transmite jogos (Terraria, entre outros) ao vivo na <strong>Twitch</strong>, com overlay
+              e avatar Live2D rodando no próprio <a href="#projetos" style="color:var(--teal);text-decoration:underline">OXYNISX VTuber Studio</a>.
+            </p>
+            <p class="stream__desc">
+              Não é só lazer — é onde eu testeio ferramentas de streaming, OBS, integração de
+              chat com IA e TTS em pt-BR, parte do ciclo de pesquisa que vira produto.
+            </p>
+            <div class="stream__cta">
+              <a class="btn btn--primary" href="https://www.twitch.tv/oxynisx" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2L2 6v14h5v3h3l3-3h4l5-5V2H4zm16 11l-3 3h-5l-3 3v-3H6V4h14v9z"/></svg>
+                <span>Assistir na Twitch</span>
+              </a>
+              <a class="btn btn--ghost" href="#projetos">
+                <span>Ver o VTuber Studio</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <aside class="stream__right" data-aos="fade-left" data-aos-delay="200">
+            <div class="stream__card">
+              <div class="stream__avatar">
+                <div class="stream__eye stream__eye--amber"></div>
+                <div class="stream__eye stream__eye--teal"></div>
+                <div class="stream__mouth"></div>
+              </div>
+              <div class="stream__card-meta">
+                <p class="stream__card-name">Oto-ai</p>
+                <p class="stream__card-status"><span class="stream__dot"></span> offline · próximo stream em breve</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CONTATO ============== -->
+    <section class="section" id="contato">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <span class="section__num">// 07</span>
+          <h2 class="section__title">Contato</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="contact">
+          <div class="contact__left" data-aos="fade-right">
+            <p class="contact__lead">
+              Vamos construir algo juntos? Preencha o formulário ou me chame direto
+              nas redes. Respondo em até 24h.
+            </p>
+
+            <ul class="contact__links">
+              <li>
+                <a href="https://github.com/Kronos1027" target="_blank" rel="noopener">
+                  <span class="contact__icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.08.66-.22.66-.5v-1.7c-2.78.6-3.36-1.34-3.36-1.34-.46-1.16-1.12-1.47-1.12-1.47-.92-.62.07-.6.07-.6 1.02.07 1.55 1.04 1.55 1.04.9 1.55 2.36 1.1 2.94.84.1-.66.36-1.1.64-1.35-2.22-.25-4.55-1.1-4.55-4.92 0-1.1.4-2 .04-2.7.04-.07.04-.27-.04-.55 0 0 .55-.16 1.78.66a6.16 6.16 0 013.22-.86c1.1 0 2.2.3 3.22.86 1.23-.82 1.78-.66 1.78-.66.36.7.13 1.27.07 1.55.36.7.04 1.6.04 2.7 0 3.83-2.33 4.67-4.55 4.92.36.3.7.94.7 1.9v2.8c0 .28.16.6.66.5A10 10 0 0012 2z"/></svg>
+                  </span>
+                  <span class="contact__link-text">
+                    <strong>GitHub</strong>
+                    <small>@Kronos1027</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.twitch.tv/oxynisx" target="_blank" rel="noopener">
+                  <span class="contact__icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2L2 6v14h5v3h3l3-3h4l5-5V2H4zm16 11l-3 3h-5l-3 3v-3H6V4h14v9z"/></svg>
+                  </span>
+                  <span class="contact__link-text">
+                    <strong>Twitch</strong>
+                    <small>twitch.tv/oxynisx</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:darlan1027pc@gmail.com">
+                  <span class="contact__icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7L22 6"/></svg>
+                  </span>
+                  <span class="contact__link-text">
+                    <strong>E-mail</strong>
+                    <small>darlan1027pc@gmail.com</small>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact__form" id="contact-form" data-aos="fade-left" data-aos-delay="200" novalidate>
+            <div class="field">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Como você se chama?" />
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="seu@email.com" />
+            </div>
+            <div class="field">
+              <label for="subject">Tipo de projeto</label>
+              <select id="subject" name="subject">
+                <option value="landing">Landing Page</option>
+                <option value="institucional">Site Institucional</option>
+                <option value="portfolio">Portfólio Profissional</option>
+                <option value="ecommerce">E-commerce Simples</option>
+                <option value="manutencao">Manutenção mensal</option>
+                <option value="outro">Outro / parceria</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">
+              <span>Enviar mensagem</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="contact__form-note" id="form-note" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <a href="#hero" class="footer__brand">
+          <span class="footer__brand-mark">D</span>
+          <span>Darlan <span style="color:var(--teal);font-weight:400">(NATSKY)</span></span>
+        </a>
+        <p class="footer__tagline">
+          Desenvolvedor · Engenheiro de IA · Criador de Sites · Streamer
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#precos">Preços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer__right">
+        <p class="footer__copy">
+          © <span id="year">2025</span> Darlan (NATSKY) · Feito com IA (GLM) e ajuste manual.
+        </p>
+        <p class="footer__build">
+          <span class="footer__build-dot"></span> build: <code>darlan@v1.1.0</code>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

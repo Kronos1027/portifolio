@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Node (se algum dia usar)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build temp
+dist/
+.cache/
